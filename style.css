@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'wp-gist';
+  src:  url('fonts/wp-gist.eot');
+  src:  url('fonts/wp-gist.eot') format('embedded-opentype'),
+    url('fonts/wp-gist.ttf') format('truetype'),
+    url('fonts/wp-gist.woff') format('woff'),
+    url('fonts/wp-gist.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'wp-gist' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  margin: 0px 5px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.gistContainer
+{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px 0px;
+}
+.gistHeader
+{
+  display:flex;
+  justify-content:space-between;
+  font-size:125%;
+  font-weight: 700;
+}
+.gistScriptContainer{
+  margin-top: 10px;
+  display: none;
+}
+.gistContainer a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.gistHeader > div {
+  display: flex;
+}
+.icon-plus-circled:before {
+  content: "\e817";
+}
+.icon-minus-circled:before {
+  content: "\e81a";
+}
+.icon-clipboard:before {
+  content: "\e8d1";
+}
+.icon-github:before {
+  content: "\e8eb";
+}

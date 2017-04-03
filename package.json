@@ -1,0 +1,30 @@
+{
+  "name": "wp-gist",
+  "version": "1.0.0",
+  "description": "Put Github Gists into a collapsable wrapper with clipboard support.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aboersch/wp-gist.git"
+  },
+  "author": "Alexander Boersch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aboersch/wp-gist/issues"
+  },
+  "homepage": "https://github.com/aboersch/wp-gist#readme",
+  "devDependencies": {
+    "@types/jquery": "^2.0.34",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-sourcemaps": "^2.5.0",
+    "gulp-typescript": "^3.1.6",
+    "gulp-uglify": "^2.1.2",
+    "merge2": "^1.0.3",
+    "pump": "^1.0.2",
+    "typescript": "^2.2.2"
+  }
+}
