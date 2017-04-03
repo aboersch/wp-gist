@@ -5,7 +5,7 @@ namespace com.aboersch.wp {
         public static init() {
             if (GistContainer._initCalled) return;
             GistContainer._initCalled = true;
-            jQuery("div.gistContainer").each((i, e) => { new GistContainer(e as HTMLDivElement); });
+            jQuery("div.gistContainer").each((i, e) => { new GistContainer(e as HTMLDivElement); return true; });
             jQuery("head").append('<link rel="stylesheet" href="/wp-gist/style.css" >');
         }
 
