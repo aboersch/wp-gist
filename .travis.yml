@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '0.11'
+- '0.10'
+deploy:
+  provider: releases
+  api_key:
+    secure: p5p5fJphLLkfIcLQReevlGzLoZ2i2loE+EOMyq43U+kvd/NcIqIWe++Tc/Eo3Jolsmm3lcWLC4szotidXk3srKDJ70CjR9g6efu5z9jxYi6sZzkpg5V5H18UtLwc1zoF+twC1I1mAAVPc6cuRaXGi3RuJxlNHxXUVak3ZU5kTpUWvAPGlxxhbJI012E0guJ1R8YrtUxkh40lL4X6B1AqFFB0GmdJkzoMpacgVsL27/Ycg+lqx6XSOKs/T8XAU2mJE/yUorVgCtu+WgxUTsPitVnRuNkXu/2yxqfwaSQt5G3sMNEtvs177uGmw95Ykg6bceYmA3eNCUQLi5CVzzo7BSUGi5Ph8zNGL8pntoTIi5Iykw9AySF1WSDYmjho28AI1iZUuY/f5fZT8ESeEopgHrkyKZVt1VvCXlBZsAyN7DKmMd4dPViq/TzJ6lloZdpJfCWOCMk2WR6pP3ODHBNtk8rSDE1cDNBFlffnTF3I+Z96J1wYKSGghifa8K1N1ceHoPIEFDrWsWT5+DKbImEQjoo2QeidFhIYJgPV8ENOlldjqPQZGsBFjqQQ51ecYixzpZRh3zTqCNNiCFik/7nkw4SpZAWbG4w/m+62rVWly9SXCoQq1QYkKH+0h3auBSL35r1asOnuyjhAl027DZ5/8Zc7ut51ucaR0Sq1O/a9sOM=
+  file: wp-gist/*
+  on:
+    repo: aboersch/wp-gist
