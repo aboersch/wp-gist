@@ -1,12 +1,14 @@
-var gulp = require('gulp');
-var ts = require('gulp-typescript');
-var uglify = require('gulp-uglify');
-var sourcemaps = require('gulp-sourcemaps');
-var cleanCSS = require('gulp-clean-css');
-var tsProject = ts.createProject('tsconfig.json');
+const gulp = require('gulp');
+const ts = require('gulp-typescript');
+const uglify = require('gulp-uglify');
+const sourcemaps = require('gulp-sourcemaps');
+const cleanCSS = require('gulp-clean-css');
+const zip = require('gulp-zip');
+
+const tsProject = ts.createProject('tsconfig.json');
 
 gulp.task('scripts', function () {
-    gulp.src(['index.ts'])
+    return gulp.src(['index.ts'])
         .pipe(sourcemaps.init())
         .pipe(tsProject())
         .js.pipe(uglify())
@@ -14,12 +16,19 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('wp-gist'));
 });
 gulp.task('css', function () {
-    gulp.src(['style.css'])
+    return gulp.src(['style.css'])
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(gulp.dest('wp-gist'));
-
 });
 gulp.task('copy-font', function () {
-    gulp.src('fonts/*.*').pipe(gulp.dest('wp-gist/fonts/'));
+    return gulp.src('fonts/*.*').pipe(gulp.dest('wp-gist/fonts/'));
 })
 gulp.task('default', ['scripts', 'css', 'copy-font']);
+
+const argv = require('yargs').argv;
+
+gulp.task('release', ['default'], function () {
+    return gulp.src('wp-gist/*')
+        .pipe(zip('release-' + argv.version + '.zip'))
+        .pipe(gulp.dest(''));
+});
