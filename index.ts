@@ -23,7 +23,7 @@ namespace com.aboersch.wp {
             this._collapsedElement = jQuery('<span class="icon-plus-circled"></span>').on('click', () => { this.expandCollapse(); });
             jQuery(container).prepend(jQuery('<div class="gistHeader">')
                 .append(jQuery('<div>')
-                    .append(jQuery(`<a><span class="icon-github"></span><span>${this._fileName}</span></a>`)
+                    .append(jQuery(`<a><span class="icon-github"></span><span>${this._fileName} (click here to expand)</span></a>`)
                         .on('click', () => { this.expandCollapse(); })))
                 .append(jQuery('<div>')
                     .append(jQuery('<a><span class="icon-clipboard"></span></a>')
