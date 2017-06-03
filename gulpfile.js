@@ -4,6 +4,7 @@ const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
 const zip = require('gulp-zip');
+const sass = require('gulp-sass');
 
 const tsProject = ts.createProject('tsconfig.json');
 
@@ -16,7 +17,8 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('wp-gist'));
 });
 gulp.task('css', function () {
-    return gulp.src(['style.css'])
+    return gulp.src(['style.scss'])
+        .pipe(sass())
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(gulp.dest('wp-gist'));
 });

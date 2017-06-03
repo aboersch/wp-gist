@@ -28,6 +28,12 @@
     border: 1px solid black;
     padding: 5px;
     margin: 10px 0px;
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+        :hover{ color: #337ab7; }
+    }
 }
 .gistHeader
 {
@@ -35,17 +41,11 @@
   justify-content:space-between;
   font-size:125%;
   font-weight: 700;
+  > div { display: flex; }
 }
 .gistScriptContainer{
   margin-top: 10px;
   display: none;
-}
-.gistContainer a {
-  cursor: pointer;
-  text-decoration: none;
-}
-.gistHeader > div {
-  display: flex;
 }
 .icon-plus-circled:before {
   content: "\e817";
